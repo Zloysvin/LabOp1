@@ -29,6 +29,7 @@ namespace LabOp1
                 }
                 Hcounter++;
             }
+            int a = Parsed.Length;
             return Parsed;
         }
     }
