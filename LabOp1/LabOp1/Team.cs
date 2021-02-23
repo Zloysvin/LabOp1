@@ -8,6 +8,5 @@ namespace LabOp1
     {
         public string Name;
         public int Score;
-        public string[] Matches;
     }
 }
