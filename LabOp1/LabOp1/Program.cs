@@ -7,6 +7,7 @@ namespace LabOp1
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            ParserCSV.Parse(@"C:\Users\cyr\Desktop\premier_league1.csv");
         }
     }
 }

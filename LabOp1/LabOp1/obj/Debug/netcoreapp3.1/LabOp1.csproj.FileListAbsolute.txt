@@ -1,0 +1,11 @@
+C:\Users\cyr\Desktop\LabOp1\LabOp1\LabOp1\bin\Debug\netcoreapp3.1\LabOp1.exe
+C:\Users\cyr\Desktop\LabOp1\LabOp1\LabOp1\bin\Debug\netcoreapp3.1\LabOp1.deps.json
+C:\Users\cyr\Desktop\LabOp1\LabOp1\LabOp1\bin\Debug\netcoreapp3.1\LabOp1.runtimeconfig.json
+C:\Users\cyr\Desktop\LabOp1\LabOp1\LabOp1\bin\Debug\netcoreapp3.1\LabOp1.runtimeconfig.dev.json
+C:\Users\cyr\Desktop\LabOp1\LabOp1\LabOp1\bin\Debug\netcoreapp3.1\LabOp1.dll
+C:\Users\cyr\Desktop\LabOp1\LabOp1\LabOp1\bin\Debug\netcoreapp3.1\LabOp1.pdb
+C:\Users\cyr\Desktop\LabOp1\LabOp1\LabOp1\obj\Debug\netcoreapp3.1\LabOp1.csprojAssemblyReference.cache
+C:\Users\cyr\Desktop\LabOp1\LabOp1\LabOp1\obj\Debug\netcoreapp3.1\LabOp1.AssemblyInfoInputs.cache
+C:\Users\cyr\Desktop\LabOp1\LabOp1\LabOp1\obj\Debug\netcoreapp3.1\LabOp1.AssemblyInfo.cs
+C:\Users\cyr\Desktop\LabOp1\LabOp1\LabOp1\obj\Debug\netcoreapp3.1\LabOp1.dll
+C:\Users\cyr\Desktop\LabOp1\LabOp1\LabOp1\obj\Debug\netcoreapp3.1\LabOp1.pdb
