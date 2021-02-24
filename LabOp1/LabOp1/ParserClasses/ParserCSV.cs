@@ -7,7 +7,7 @@ namespace LabOp1
 {
     public static class ParserCSV
     {
-        public static string[,] Parse(string Path, int height)
+        public static Team[] ParseToTeams(string Path, int height)
         {
             StreamReader sr = new StreamReader(@Path);
             string[,] Parsed = new string[1, 1];
@@ -29,8 +29,7 @@ namespace LabOp1
                 Hcounter++;
             }
             sr.Close();
-            int a = Parsed.Length;
-            return Parsed;
+            return TeamConvertor.Convert(Parsed, Hcounter);
         }
     }
 }
