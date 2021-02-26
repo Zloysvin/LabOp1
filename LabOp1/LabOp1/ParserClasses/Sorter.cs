@@ -12,7 +12,8 @@ namespace LabOp1
             {
                 heap.AddItem(itemOfArray);
             }
-            return heap.SortedArray;
+
+            return heap.Sort();
         }
     }
 }
