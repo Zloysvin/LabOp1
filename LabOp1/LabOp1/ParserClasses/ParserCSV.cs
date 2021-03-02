@@ -10,6 +10,7 @@ namespace LabOp1
         public static Team[] ParseToTeams(string Path, int height)
         {
             StreamReader sr = new StreamReader(@Path);
+            sr.ReadLine();
             string[,] Parsed = new string[1, 1];
             bool ArrayCreated = false;
             int Hcounter = 0;

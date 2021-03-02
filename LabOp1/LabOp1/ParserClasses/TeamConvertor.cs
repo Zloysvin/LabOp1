@@ -18,7 +18,7 @@ namespace LabOp1
                 {
                     if (j != 0)
                     {
-                        team.Score += GetScore(ParsedCSV[i, j]);
+                        team.Score += GetScore(ParsedCSV[i, j].ToString());
                     }
                     else
                     {
@@ -31,7 +31,8 @@ namespace LabOp1
         }
         static int GetScore(string match)
         {
-            return System.Convert.ToInt32(match[0]);
+            
+            return System.Convert.ToInt32(match[0].ToString());
         }
     }
 }

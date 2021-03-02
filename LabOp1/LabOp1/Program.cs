@@ -16,6 +16,7 @@ namespace LabOp1
             sr.Close();
             Team[] teams = ParserCSV.ParseToTeams(@"C:\Users\cyr\Desktop\premier_league1.csv", height);
             var teamsSortedByIncreasing = sorter.SortWithHeapSorting(teams);
+            ParserClasses.ExportCSV.Export(teamsSortedByIncreasing);
         }
     }
 }
