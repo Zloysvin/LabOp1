@@ -10,13 +10,19 @@ namespace LabOp1
         {
             Sorter<Team> sorter = new Sorter<Team>();
 
-            Console.WriteLine("Hello World!");
-            StreamReader sr = new StreamReader(@"C:\Users\cyr\Desktop\premier_league1.csv");
-            int height = Convert.ToInt32(sr.ReadLine());
-            sr.Close();
-            Team[] teams = ParserCSV.ParseToTeams(@"C:\Users\cyr\Desktop\premier_league1.csv", height);
-            var teamsSortedByIncreasing = sorter.SortWithHeapSorting(teams);
-            ParserClasses.ExportCSV.Export(teamsSortedByIncreasing);
+            Console.WriteLine("Enter Directory:");
+            string path = Console.ReadLine();
+            string[] files = Directory.GetFiles(path, "*.csv");
+            for (int i = 0; i < files.Length; i++)
+            {
+                StreamReader sr = new StreamReader(files[i]);
+                int height = Convert.ToInt32(sr.ReadLine());
+                sr.Close();
+                Team[] teams = ParserCSV.ParseToTeams(files[i], height);
+                var teamsSortedByIncreasing = sorter.SortWithHeapSorting(teams);
+                ParserClasses.ExportCSV.Export(teamsSortedByIncreasing, i+1);
+            }
+            
         }
     }
 }
