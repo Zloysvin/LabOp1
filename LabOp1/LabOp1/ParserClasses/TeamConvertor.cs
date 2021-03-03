@@ -29,12 +29,29 @@ namespace LabOp1
             }
             return teams.ToArray();
         }
+        private static int GetInt(string score)
+        {
+            if (score.Contains("0x"))
+            {
+                return System.Convert.ToInt32(score, 16);
+            }
+
+            return System.Convert.ToInt32(score);
+        }
         static int GetScore(string match)
         {
-            if (!match.Contains("0x"))
-                return System.Convert.ToInt32(match[0].ToString());
-            else
-                return System.Convert.ToInt32(match, 16);
+            string[] goals = match.Split(":");
+            var score1 = GetInt(goals[0]);
+            var score2 = GetInt(goals[1]);
+            if(score1 == score2)
+            {
+                return 1;
+            }
+            else if(score1 > score2)
+            {
+                return 3;
+            }
+            return 0;
         }
     }
 }
