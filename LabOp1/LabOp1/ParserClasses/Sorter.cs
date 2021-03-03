@@ -1,7 +1,8 @@
+using System;
+using System.Reflection.Metadata.Ecma335;
 namespace LabOp1
 {
-    using System;
-    using System.Reflection.Metadata.Ecma335;
+
 
     public class Sorter<T> where T : IComparable<T>
     {
@@ -18,10 +19,10 @@ namespace LabOp1
 
         public T[] Reverse(T[] array)
         {
-            T[] reversedArray = new T[array.Lenght];
-            for (int i = 0; i < array.Lenght; i++)
+            T[] reversedArray = new T[array.Length];
+            for (int i = 0; i < array.Length; i++)
             {
-                reversedArray[i] = array[array.Lenght - 1 - i];
+                reversedArray[i] = array[array.Length - 1 - i];
             }
 
             return reversedArray;
