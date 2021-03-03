@@ -13,7 +13,18 @@ namespace LabOp1
                 heap.AddItem(itemOfArray);
             }
 
-            return heap.Sort();
+            return Reverse(heap.Sort());
+        }
+
+        public T[] Reverse(T[] array)
+        {
+            T[] reversedArray = new T[array.Lenght];
+            for (int i = 0; i < array.Lenght; i++)
+            {
+                reversedArray[i] = array[array.Lenght - 1 - i];
+            }
+
+            return reversedArray;
         }
     }
 }
