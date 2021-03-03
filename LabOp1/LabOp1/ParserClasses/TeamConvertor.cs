@@ -31,8 +31,10 @@ namespace LabOp1
         }
         static int GetScore(string match)
         {
-            
-            return System.Convert.ToInt32(match[0].ToString());
+            if (!match.Contains("0x"))
+                return System.Convert.ToInt32(match[0].ToString());
+            else
+                return System.Convert.ToInt32(match, 16);
         }
     }
 }
