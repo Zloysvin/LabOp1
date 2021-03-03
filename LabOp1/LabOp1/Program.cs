@@ -12,7 +12,7 @@ namespace LabOp1
 
             Console.WriteLine("Enter Directory:");
             string path = Console.ReadLine();
-            string[] files = Directory.GetFiles(path, "*.csv");
+            string[] files = Directory.GetFiles(@path, "*.csv");
             for (int i = 0; i < files.Length; i++)
             {
                 StreamReader sr = new StreamReader(files[i]);
