@@ -8,6 +8,7 @@ namespace LabOp1
     {
         public string Name;
         public int Score;
+        public int GoalSaldo;
 
         public int CompareTo(Team otherTeam)
         {
@@ -18,7 +19,10 @@ namespace LabOp1
 
             if (Score == otherTeam.Score)
             {
-                return 0;
+                if (GoalSaldo > otherTeam.GoalSaldo)
+                {
+                    return 1;
+                }
             }
 
             return -1;

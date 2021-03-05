@@ -18,17 +18,21 @@ namespace LabOp1
                 {
                     if (j != 0)
                     {
-                        team.Score += GetScore(ParsedCSV[i, j].ToString());
+                        team.Score += GetScore(ParsedCSV[i, j]);
+                        team.GoalSaldo += GetGoalSaldo(ParsedCSV[i, j]);
                     }
                     else
                     {
                         team.Name = ParsedCSV[i, j];
                     }
                 }
+
                 teams.Add(team);
             }
+
             return teams.ToArray();
         }
+
         private static int GetInt(string score)
         {
             if (score.Contains("0x"))
@@ -38,20 +42,31 @@ namespace LabOp1
 
             return System.Convert.ToInt32(score);
         }
+
         static int GetScore(string match)
         {
             string[] goals = match.Split(":");
             var score1 = GetInt(goals[0]);
             var score2 = GetInt(goals[1]);
-            if(score1 == score2)
+            if (score1 == score2)
             {
                 return 1;
             }
-            else if(score1 > score2)
+            else if (score1 > score2)
             {
                 return 3;
             }
+
             return 0;
+        }
+
+        private static int GetGoalSaldo(string match)
+        {
+            string[] goals = match.Split(":");
+            var score1 = GetInt(goals[0]);
+            var score2 = GetInt(goals[1]);
+
+            return score1 - score2;
         }
     }
 }
